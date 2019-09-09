@@ -1,0 +1,125 @@
+$near-black: rgb(33, 0, 8);
+$red: #b82525;
+
+.reveal {
+  section {
+    img {
+      border: none;
+      background: none;
+      box-shadow: none;
+      margin: 0;
+
+      &.shadow {
+        -webkit-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.50);
+      }
+    }
+
+    h1, h2, h3, h4, h5, & {
+      color: $near-black;
+      font-weight: 300 !important;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "papaya_sunriseregular", serif;
+      line-height: 1.5em;
+    }
+
+
+    h5 {
+      font-weight: 400 !important;
+      font-size: 50px;
+      font-family: "Open Sans", serif;
+    }
+
+    h1, h2 {
+      font-weight: 600 !important;
+    }
+
+    font-size: 45px;
+    font-family: "Open Sans", serif;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      li:before {
+        content:  "-";
+        color: $red;
+        position: relative;
+        left: -25px;
+      }
+
+      li {
+        padding-bottom: 15px;
+      }
+    }
+
+    .accent {
+      color: $red;
+    }
+
+
+    blockquote {
+      color: $near-black;
+      box-shadow: none;
+      font-family: Caveat, serif;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: lighter;
+      text-align: left
+    }
+
+    pre {
+      box-shadow: none;
+      width: auto;
+      font-size: 0.8em;
+    }
+
+    .title {
+      img {
+        height: 350px;
+      }
+
+      h2 {
+        padding-bottom: 30px;
+      }
+    }
+
+    .bordered {
+      border-radius: 25px;
+      border: 3px dashed $near-black;
+      padding: 5px;
+    }
+
+    .white {
+      color: white;
+    }
+  }
+}
+
+
+.fullscreen-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+div.slide-background.present[data-background-hash="img/professor.pngnullnullnullnullnullnullnullnullnull"] {
+  animation: fadeIn 40s forwards;
+}
+div.slide-background.present[data-background-hash="img/professor.pngnullnullnullnullblacknullnullnonenull"] {
+  animation: fadeOut 5s forwards;
+}

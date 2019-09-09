@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>How to grow community</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<link rel="stylesheet" href="css/custom.css">
+
+	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+
+	<link href="font/font.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="plugin/chartist/chartist.min.css">
+
+
+	<!-- Printing and PDF exports -->
+	<script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<section data-background="#FFFFFF">
+				<img class="fragment" data-duration="2" data-animate="fadeIn" src="img/ministry.png">
+			</section>
+			<section data-background-video="media/money.mp4"><h2 class="white" data-animate="fadeIn" data-duration="2"
+																													 data-delay="2">How to grow a community</h2></section>
+			<section><h3 class="accent">Without the suitcase full of money</h3><img src="img/suitcase.png"
+																																							style="height: 250px"></section>
+			<section><h3><span class="accent">two</span> problems</h3></section>
+			<section data-background="img/russia.png"></section>
+			<section data-background="img/uroboros/1.png" data-background-transition="none" data-transition="none"></section>
+			<section data-background="img/uroboros/2.png" data-background-transition="none" data-transition="none"></section>
+			<section data-background="img/uroboros/3.png" data-background-transition="none" data-transition="none"></section>
+			<section data-background="img/uroboros/4.png" data-background-transition="none" data-transition="none"></section>
+			<section data-background="img/uroboros/5.png" data-background-transition="none" data-transition="none"></section>
+			<section data-background="img/uroboros/6.png" data-background-transition="none" data-transition="none"></section>
+			<section data-background="img/uroboros/7.png" data-background-transition="none" data-transition="none"></section>
+			<section data-background-video="media/unhappy.mp4"></section>
+		</section>
+		<section>
+			<h5 style="margin: 0">Types of communities</h5>
+			<div style="font-weight: 100; font-style: italic; font-size: 30px; padding-bottom: 50px">and their lifecycles</div>
+			<ul>
+				<li class="fragment">Around technology</li>
+				<li class="fragment">Around role</li>
+				<li class="fragment">Just... communities</li>
+			</ul>
+		</section>
+		<section>
+			<a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by vectorpouch -
+				www.freepik.com</a>
+		</section>
+	</div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        controls: false,
+        progress: false,
+        transition: 'fade',
+        transitionSpeed: 'fast',
+        backgroundTransition: 'fade',
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {src: 'plugin/highlight/highlight.js', async: true, callback: waitForHLJS},
+            {src: 'bower_components/jquery/dist/jquery.min.js'},
+            {src: 'js/animations.js'},
+            {src: 'js/skills_chart.js'},
+            {src: 'plugin/script-runner/script-runner.js'},
+            {src: 'plugin/alt-arrows/alt-arrows.js', async: true},
+            {src: 'plugin/blur-background/blur-background.js'},
+            {src: 'plugin/loader-splashscreen/loader-splashscreen.js'},
+            {src: 'plugin/code-fragment-highlight/code-fragment-highlight.js'},
+            {src: 'plugin/global-fragments/global-fragments.js'},
+            {src: 'plugin/chartist/chartist.js'},
+
+
+        ],
+        keyboard: {
+            39: 'next',
+            37: 'prev'
+        },
+
+
+    });
+
+
+    function waitForHLJS() {
+        if (window.hljs) {
+            hljs.initHighlightingOnLoad();
+            return;
+        }
+        console.log('Waiting for hljs');
+        setTimeout(waitForHLJS, 1000);
+    }
+</script>
+</body>
+</html>
