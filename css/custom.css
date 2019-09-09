@@ -54,6 +54,16 @@
     padding: 5px; }
   .reveal section .white {
     color: white; }
+  .reveal section .yesno {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .reveal section .yesno h3 {
+      width: 100px;
+      padding: 10px; }
 
 .fullscreen-container {
   position: fixed;
