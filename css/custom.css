@@ -66,6 +66,34 @@
       padding: 20px; }
   .reveal section .chart-title {
     font-size: 30px; }
+  .reveal section div.advice {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    vertical-align: middle; }
+    .reveal section div.advice div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-size: 900px 531px;
+      width: 900px;
+      height: 531px;
+      background-image: url("../img/advice.png");
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .reveal section div.advice div > * {
+        padding: 30px 0 0 0;
+        margin: 0; }
 
 .fullscreen-container {
   position: fixed;
