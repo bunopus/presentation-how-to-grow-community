@@ -132,6 +132,20 @@ $red: #b82525;
         }
       }
     }
+
+    s {
+      color: #4e4e4e;
+    }
+
+    a {
+      color: $near-black;
+      &::after {
+        font-family: 'font_awesome', serif;
+        font-size: 20px;
+        vertical-align: text-top;
+        content: " \f35d";
+      }
+    }
   }
 }
 
