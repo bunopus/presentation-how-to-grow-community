@@ -63,7 +63,9 @@
             justify-content: center; }
     .reveal section .yesno h3 {
       width: 100px;
-      padding: 10px; }
+      padding: 20px; }
+  .reveal section .chart-title {
+    font-size: 30px; }
 
 .fullscreen-container {
   position: fixed;

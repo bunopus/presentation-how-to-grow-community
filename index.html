@@ -42,6 +42,11 @@
 																													 data-delay="2">How to grow a community</h2></section>
 			<section><h3 class="accent">Without the suitcase full of money</h3><img src="img/suitcase.png"
 																																							style="height: 250px"></section>
+			<section data-background="img/me.png"></section>
+			<section data-background="img/rudart.png"></section>
+			<section data-background="img/communities.png"></section>
+			<section data-background="img/communities-dart.png"></section>
+			<section data-background="img/rudart.png"></section>
 			<section><h3><span class="accent">two</span> problems</h3></section>
 			<section data-background="img/russia.png"></section>
 			<section data-background="img/uroboros/1.png" data-background-transition="none" data-transition="none"></section>
@@ -71,7 +76,20 @@
 					<li class="fragment">Just... communities</li>
 				</ul>
 			</section>
+			<section data-chart-tool>
+				<h5 class="chart-title">Technology communities</h5>
+				<div class="chart line-chart" style="width: 1000px; height: 600px; font-size:16px"></div>
+			</section>
+			<section data-chart-role>
+				<h5 class="chart-title">Role communities</h5>
+				<div class="chart line-chart" style="width: 1000px; height: 600px; font-size:16px"></div>
+			</section>
+			<section data-chart-communities>
+				<h5 class="chart-title">...Communities</h5>
+				<div class="chart line-chart" style="width: 1000px; height: 600px; font-size:16px"></div>
+			</section>
 		</section>
+		<section data-background="img/question/1.png"></section>
 
 		<section>
 			<a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by vectorpouch -
@@ -113,6 +131,109 @@
         keyboard: {
             39: 'next',
             37: 'prev'
+        },
+        script_runner: {
+            'data-chart-tool': {
+                'slidechanged': function (event) {
+                    var slide = event.currentSlide;
+                    var container = slide.getElementsByClassName('chart')[0];
+                    container.innerHtml = "";
+                    Chartist.Line(container, {
+                        // labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                        series: [
+                            [0, 5, 3, 5, 10, 5, 10, 3, 11, 7, 0]
+                        ]
+                    }, {
+                        chartPadding: 20,
+                        low: 0,
+                        showPoint: false,
+                        fullWidth: true,
+                        axisY: {
+                            onlyInteger: true
+                        },
+                    }).on('draw', function(data) {
+                        if(data.type === 'line') {
+                            data.element.animate({
+                                d: {
+                                    begin: data.index,
+                                    dur: 1000,
+                                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                                    to: data.path.clone().stringify(),
+                                    easing: Chartist.Svg.Easing.easeOutQuint
+                                }
+                            });
+                        }
+                    });
+                }
+            },
+            'data-chart-role': {
+                'slidechanged': function (event) {
+                    var slide = event.currentSlide;
+                    var container = slide.getElementsByClassName('chart')[0];
+                    container.innerHtml = "";
+                    Chartist.Line(container, {
+                        series: [
+                            [7, 6]
+                        ]
+                    }, {
+                        chartPadding: 20,
+                        low: 0,
+												high: 10,
+                        showPoint: false,
+                        fullWidth: true,
+                        axisY: {
+                            onlyInteger: true
+                        },
+                    }).on('draw', function(data) {
+                        if(data.type === 'line') {
+                            data.element.animate({
+                                d: {
+                                    begin: data.index,
+                                    dur: 1000,
+                                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                                    to: data.path.clone().stringify(),
+                                    easing: Chartist.Svg.Easing.easeOutQuint
+                                }
+                            });
+                        }
+                    });
+                }
+            },
+            'data-chart-communities': {
+                'slidechanged': function (event) {
+                    var slide = event.currentSlide;
+                    var container = slide.getElementsByClassName('chart')[0];
+                    container.innerHtml = "";
+                    Chartist.Line(container, {
+                        series: [
+                            [5, 5, 10, 8, 7, 5, 4, null, null, null, 10, 10, 7, 8, 6, 9],
+                            [10, 15, null, 12, null, 10, 12, 15, null, null, 12, null, 14, null, null, null],
+                            [null, null, null, null, 3, 4, 1, 3, 4,  6,  7,  9, 5, null, null, null],
+                            [{x:3, y: 3}, {x: 5, y: undefined}, {x: 6, y: 4}, {x: 7, y: null}, ]
+                        ]
+                    }, {
+                        chartPadding: 20,
+                        low: 0,
+                        showPoint: false,
+                        fullWidth: true,
+                        axisY: {
+                            onlyInteger: true
+                        },
+                    }).on('draw', function(data) {
+                        if(data.type === 'line') {
+                            data.element.animate({
+                                d: {
+                                    begin: data.index,
+                                    dur: 1000,
+                                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                                    to: data.path.clone().stringify(),
+                                    easing: Chartist.Svg.Easing.easeOutQuint
+                                }
+                            });
+                        }
+                    });
+                }
+            },
         },
 
 
