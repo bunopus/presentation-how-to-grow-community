@@ -10,9 +10,9 @@ $red: #b82525;
       margin: 0;
 
       &.shadow {
-        -webkit-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.50);
+        -webkit-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.50);
       }
     }
 
@@ -43,8 +43,9 @@ $red: #b82525;
     ul {
       list-style: none;
       margin: 0;
+
       li:before {
-        content:  "-";
+        content: "-";
         color: $red;
         position: relative;
         left: -25px;
@@ -139,6 +140,7 @@ $red: #b82525;
 
     a {
       color: $near-black;
+
       &::after {
         font-family: 'font_awesome', serif;
         font-size: 20px;
@@ -149,6 +151,19 @@ $red: #b82525;
   }
 }
 
+#credits {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+
+  &, a, a:visited, a:hover {
+    color: rgba(0, 0, 0, 0.56);
+    text-decoration: none;
+
+  }
+}
 
 .fullscreen-container {
   position: fixed;
@@ -164,13 +179,18 @@ $red: #b82525;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 div.slide-background.present[data-background-hash="img/professor.pngnullnullnullnullnullnullnullnullnull"] {
   animation: fadeIn 40s forwards;
 }
+
 div.slide-background.present[data-background-hash="img/professor.pngnullnullnullnullblacknullnullnonenull"] {
   animation: fadeOut 5s forwards;
 }

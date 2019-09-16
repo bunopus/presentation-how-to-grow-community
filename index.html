@@ -46,7 +46,6 @@
 			<section data-background="img/rudart.png"></section>
 			<section data-background="img/communities.png"></section>
 			<section data-background="img/communities-dart.png"></section>
-			<section data-background="img/rudart.png"></section>
 			<section><h3><span class="accent">two</span> problems</h3></section>
 			<section data-background="img/russia.png"></section>
 			<section data-background="img/uroboros/1.png" data-background-transition="none" data-transition="none"></section>
@@ -72,17 +71,37 @@
 				</div>
 				<ul>
 					<li class="fragment">Around technology</li>
-					<li class="fragment">Around role</li>
-					<li class="fragment">Just... communities</li>
+					<li style="visibility: hidden"></li>
+					<li style="visibility: hidden"></li>
 				</ul>
 			</section>
 			<section data-chart-tool>
 				<h5 class="chart-title">Technology communities</h5>
 				<div class="chart line-chart" style="width: 1000px; height: 600px; font-size:16px"></div>
 			</section>
+			<section>
+				<h5 style="margin: 0">Types of communities</h5>
+				<div style="font-weight: 100; font-style: italic; font-size: 30px; padding-bottom: 50px">and their lifecycles
+				</div>
+				<ul>
+					<li>Around technology</li>
+					<li class="fragment">Around role</li>
+					<li style="visibility: hidden"></li>
+				</ul>
+			</section>
 			<section data-chart-role>
 				<h5 class="chart-title">Role communities</h5>
 				<div class="chart line-chart" style="width: 1000px; height: 600px; font-size:16px"></div>
+			</section>
+			<section>
+				<h5 style="margin: 0">Types of communities</h5>
+				<div style="font-weight: 100; font-style: italic; font-size: 30px; padding-bottom: 50px">and their lifecycles
+				</div>
+				<ul>
+					<li>Around technology</li>
+					<li>Around role</li>
+					<li class="fragment">Just... communities</li>
+				</ul>
 			</section>
 			<section data-chart-communities>
 				<h5 class="chart-title">...Communities</h5>
@@ -198,22 +217,24 @@
 		</section>
 
 		<section>
-			<section class="title">
+			<section data-credits>
 				<h2 class="accent">Thank you</h2>
-				<p style="font-family: 'Papaya Sunrise'"><img src="img/twitter.png" style="height: 40px; padding-right: 10px; padding-bottom: 5px">bunopus</p>
+				<p style="font-family: 'Papaya Sunrise'"><img src="img/twitter.png"
+																											style="height: 40px; padding-right: 10px; padding-bottom: 5px">bunopus
+				</p>
 			</section>
-		</section>
-
-		<section>
-			<a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by vectorpouch -
-				www.freepik.com</a>
-			<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik -
-				www.freepik.com</a>
 		</section>
 	</div>
 </div>
 
 <script src="js/reveal.js"></script>
+
+<div id="credits">
+	<a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by vectorpouch - www.freepik.com</a> /
+	<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a> /
+	Font by <a href="http://www.fontspace.com/sharkshock/papaya-sunrise">fontspace</a>
+</div>
+
 
 <script>
     Reveal.initialize({
@@ -353,9 +374,13 @@
                     var video = slide.getElementsByTagName('video')[0];
                     video.play();
                 }
+            },
+            'data-credits': {
+                'slidechanged': function () {
+                    $("#credits").show();
+                }
             }
-        },
-
+        }
 
     });
 
@@ -368,6 +393,16 @@
         console.log('Waiting for hljs');
         setTimeout(waitForHLJS, 1000);
     }
+
+    function cleanupEffects() {
+        $("#credits").hide();
+
+    }
+
+    Reveal.addEventListener('slidechanged', function () {
+        cleanupEffects();
+    });
+
 </script>
 </body>
 </html>

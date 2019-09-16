@@ -104,6 +104,16 @@
       vertical-align: text-top;
       content: " \f35d"; }
 
+#credits {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center; }
+  #credits, #credits a, #credits a:visited, #credits a:hover {
+    color: rgba(0, 0, 0, 0.56);
+    text-decoration: none; }
+
 .fullscreen-container {
   position: fixed;
   width: 100%;
